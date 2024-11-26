@@ -2,7 +2,7 @@
 
 Back in 2016, when I was an Android Developer at Coding Worms Software Solutions in the KP Government IT Park, Peshawar, we developed Android applications using Java. To compile our code for Android devices, we relied on tools like Gradle and Maven.
 
-At that time, sharing our code was a real challenge. We often had to send files in ZIP or APK formats, but the client’s system would frequently encounter errors when trying to compile the same code.
+At that time, sharing our code was a real challenge. We often had to send files in ZIP or APK formats, but the client’s system would frequently encounter errors when trying to compile/run the same code.
 
 To solve this problem, developers created a tool called **Docker**. Before we dive into what Docker is, imagine this:
 
