@@ -1,6 +1,4 @@
-
-
-## 3. Kubernetes Commands
+# Kubernetes Commands
 
 Kubernetes commands are primarily executed using `kubectl`, the command-line tool for interacting with Kubernetes clusters. Below is a comprehensive list of `kubectl` commands, organized by category, with usage details and examples.
 
