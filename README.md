@@ -1,4 +1,4 @@
-# Comprehensive Reference of Docker and Kubernetes CLI Commands
+# Comprehensive Reference of Docker and Kubernetes
 **1. Introduction**
 
 Containerization and orchestration technologies have become indispensable in modern application development and deployment workflows. Docker, a leading containerization platform, enables developers to package applications and their dependencies into portable, lightweight containers, ensuring consistency across diverse computing environments.1 Complementary to Docker is Kubernetes, an open-source container orchestration system that automates the deployment, scaling, and management of containerized applications across a cluster of nodes.2 While Docker excels at the level of individual containers, Kubernetes operates at a higher level, coordinating these containers at scale in production environments.1 The synergy between these technologies allows for efficient resource utilization, high availability, and simplified application lifecycle management.3
