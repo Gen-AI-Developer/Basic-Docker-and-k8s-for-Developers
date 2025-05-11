@@ -93,9 +93,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 1558.7857429098185,
-			"y": -103.70675665552517,
-			"lastActivityTimestamp": 1746948687716,
+			"x": -2092.8460663975916,
+			"y": -5.191510001550796,
+			"lastActivityTimestamp": 1746948787313,
 			"meta": {}
 		},
 		{
@@ -1479,8 +1479,8 @@
 			"typeName": "binding"
 		},
 		{
-			"x": 4233.910760344018,
-			"y": 2021.4702248529402,
+			"x": 4437.5089367622395,
+			"y": 2875.2690291874083,
 			"z": 0.1522606957752005,
 			"meta": {},
 			"id": "camera:page:page",
@@ -2505,9 +2505,9 @@
 			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:cZSX0p0LujsLWCfwnXIWs"
+				"shape:qi_B5kdz0kZ64iW0kVDl2"
 			],
-			"hoveredShapeId": "shape:cZSX0p0LujsLWCfwnXIWs",
+			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
 			"focusedGroupId": null,
@@ -5751,7 +5751,7 @@
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "default",
+				"type": "move",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -5761,7 +5761,7 @@
 			"screenBounds": {
 				"x": 0,
 				"y": 0,
-				"w": 1318,
+				"w": 961,
 				"h": 603
 			},
 			"insets": [
@@ -5788,6 +5788,490 @@
 			"id": "instance:instance",
 			"currentPageId": "page:page",
 			"typeName": "instance"
+		},
+		{
+			"x": -2666.3221112690335,
+			"y": -1378.3140697848266,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:qi_B5kdz0kZ64iW0kVDl2",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 690.9966714760067,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.249837350630684,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In Kubernetes, the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "kubelet"
+								},
+								{
+									"type": "text",
+									"text": " serves as the primary agent on each node, responsible for ensuring that containers are running in a pod as specified. However, the kubelet doesn't directly configure low-level system resources like namespaces or cgroups. Instead, it delegates these tasks to the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "container runtime"
+								},
+								{
+									"type": "text",
+									"text": " through the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Container Runtime Interface (CRI)"
+								},
+								{
+									"type": "text",
+									"text": "."
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "https://www.devoriales.com/post/318/understanding-kubernetes-container-runtime-cri-containerd-and-runc-explained?utm_source=chatgpt.com",
+												"target": "_blank",
+												"rel": "noopener",
+												"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+											}
+										}
+									],
+									"text": "Kubernetes+3devoriales.com+3Medium+3"
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Division of Responsibilities: Kubelet vs. Container Runtime"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Kubelet Responsibilities:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Pod Specification Handling"
+												},
+												{
+													"type": "text",
+													"text": ": The kubelet receives the pod specification from the API server, which includes details about containers, volumes, and resource requirements."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Communication with Container Runtime"
+												},
+												{
+													"type": "text",
+													"text": ": Using the CRI, the kubelet instructs the container runtime to perform actions like pulling images, creating containers, and starting them."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Monitoring and Reporting"
+												},
+												{
+													"type": "text",
+													"text": ": The kubelet monitors the state of pods and containers, reporting status back to the API server."
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://www.linkedin.com/pulse/managing-pods-role-kubernetes-kubelet-christopher-adamson-m6gvc?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "LinkedIn+1Techiescamp+1"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Container Runtime Responsibilities:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Image Management"
+												},
+												{
+													"type": "text",
+													"text": ": Pulling and managing container images as instructed by the kubelet."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Container Lifecycle Management"
+												},
+												{
+													"type": "text",
+													"text": ": Creating, starting, stopping, and deleting containers."
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://it.wikipedia.org/wiki/Kubernetes?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Kubernetes+2Wikipedia+2Medium+2"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "System-Level Resource Configuration"
+												},
+												{
+													"type": "text",
+													"text": ": Setting up namespaces (e.g., network, PID) and cgroups for resource isolation and limitation."
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Why the Kubelet Relies on the Container Runtime"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The kubelet delegates system-level configurations to the container runtime because:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Abstraction and Modularity"
+												},
+												{
+													"type": "text",
+													"text": ": By using the CRI, Kubernetes can support various container runtimes without being tightly coupled to any specific one."
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://www.devoriales.com/post/318/understanding-kubernetes-container-runtime-cri-containerd-and-runc-explained?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Kubernetes+2devoriales.com+2Kubernetes+2"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Specialization"
+												},
+												{
+													"type": "text",
+													"text": ": Container runtimes are specialized in interacting with the operating system kernel to set up the necessary environments for containers, including namespaces and cgroups."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Security and Stability"
+												},
+												{
+													"type": "text",
+													"text": ": Delegating these tasks ensures that the kubelet doesn't need elevated privileges to modify system-level settings, enhancing the security and stability of the node."
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Summary"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The kubelet acts as the orchestrator on each node, interpreting pod specifications and coordinating with the container runtime to realize the desired state. The container runtime, in turn, handles the low-level operations required to run containers, such as setting up namespaces and cgroups. This clear separation of concerns allows Kubernetes to be flexible, modular, and secure in managing containerized workloads."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0U6GV",
+			"typeName": "shape"
 		},
 		{
 			"x": 192.02699973329663,
