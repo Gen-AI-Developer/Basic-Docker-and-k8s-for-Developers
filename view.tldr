@@ -93,9 +93,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": -125.65603833412342,
-			"y": 1233.9141289056709,
-			"lastActivityTimestamp": 1746943918994,
+			"x": 1558.7857429098185,
+			"y": -103.70675665552517,
+			"lastActivityTimestamp": 1746948687716,
 			"meta": {}
 		},
 		{
@@ -135,6 +135,393 @@
 			},
 			"parentId": "shape:Y3vhX7YA5S9An9k022OAL",
 			"index": "a894B",
+			"typeName": "shape"
+		},
+		{
+			"x": -875.7481444297705,
+			"y": -1261.5607614653163,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:DpEQv8gvenh2m9mw-oqhd",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 983.4182124909134,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 0.7238338805989617,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In Kubernetes, the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "kubelet"
+								},
+								{
+									"type": "text",
+									"text": " is the component responsible for creating and managing pods on each node. While the API server handles the creation and validation of pod specifications, it is the kubelet that ensures the specified containers are running as intended."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Pod Creation Process"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "API Server"
+												},
+												{
+													"type": "text",
+													"text": ": When you create a pod (e.g., using "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "kubectl"
+												},
+												{
+													"type": "text",
+													"text": "), the request is sent to the Kubernetes API server. The API server validates and stores the pod specification in etcd, the cluster's data store."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Scheduler"
+												},
+												{
+													"type": "text",
+													"text": ": The scheduler assigns the pod to an appropriate node based on resource availability and other constraints."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Kubelet"
+												},
+												{
+													"type": "text",
+													"text": ": On the assigned node, the kubelet receives the pod specification and interacts with the container runtime to create and start the containers defined in the pod. "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Kubernetes"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Nature of a Pod"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "A pod is a "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "passive abstraction"
+								},
+								{
+									"type": "text",
+									"text": " in Kubernetes. It defines how containers are grouped, their shared resources (like networking and storage), and their configuration. The pod itself doesn't actively manage the containers; instead, it serves as a blueprint for the kubelet to manage container lifecycles."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Role of the Container Runtime"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The container runtime (e.g., containerd, CRI-O) is responsible for the actual execution of containers. The kubelet communicates with the container runtime to perform actions such as:"
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "link",
+											"attrs": {
+												"href": "https://kubernetes.io/docs/concepts/containers/?utm_source=chatgpt.com",
+												"target": "_blank",
+												"rel": "noopener",
+												"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+											}
+										}
+									],
+									"text": "Wikipedia+3Kubernetes+3LinkedIn+3"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Pulling container images from registries"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Starting and stopping containers"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Managing container resources and isolation"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"text": "Monitoring container health and status"
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://www.linkedin.com/pulse/role-container-runtime-kubernetes-bavithran-m-vuaxc?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Kubernetes+5LinkedIn+5Aqua+5"
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://overcast.blog/understanding-and-using-kubernetes-container-runtime-79a88ab1661c?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Wikipedia+4overcast blog+4Wikipedia+4"
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://kubernetes.io/docs/concepts/overview/components/?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Wikipedia+6Kubernetes+6Wikipedia+6"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In summary, while the API server handles the initial pod specification, the kubelet is the primary component that creates and manages pods on nodes, using the container runtime to handle the low-level container operations."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0R1Wd",
 			"typeName": "shape"
 		},
 		{
@@ -304,6 +691,225 @@
 			},
 			"parentId": "page:page",
 			"index": "b08017",
+			"typeName": "shape"
+		},
+		{
+			"x": 2263.615627795817,
+			"y": -1340.9143173855123,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:K1InuKY61Yj6-Iv51NUfu",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 767.0521695750294,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The container runtime must interact directly with the host operating system and kernel to establish the necessary isolation and resource management for containers. This interaction is essential because the runtime leverages Linux kernel features—specifically namespaces and control groups (cgroups)—to provide the environment in which containers operate."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Why the Runtime Interacts with the OS Kernel"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Namespaces for Isolation"
+												},
+												{
+													"type": "text",
+													"text": ": Namespaces partition kernel resources so that one set of processes sees one set of resources while another set of processes sees a different set. This includes isolating aspects like process IDs, network interfaces, and file systems. The container runtime sets up these namespaces to ensure that containers are isolated from each other and from the host system. "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://en.wikipedia.org/wiki/LXC?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Wikipedia"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Cgroups for Resource Management"
+												},
+												{
+													"type": "text",
+													"text": ": Control groups (cgroups) allow the kernel to limit and monitor the resource usage (CPU, memory, disk I/O, etc.) of a group of processes. The container runtime configures cgroups to enforce resource limits and ensure fair resource distribution among containers. "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://en.wikipedia.org/wiki/Container_Linux?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Wikipedia"
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://blog.nginx.org/blog/what-are-namespaces-cgroups-how-do-they-work?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "NGINX Community Blog"
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "These operations require direct interaction with the kernel because they involve configuring low-level system settings that are outside the scope of what a pod abstraction can handle."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The Role of Pods in Kubernetes"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In Kubernetes, a pod is the smallest deployable unit and serves as a logical wrapper for one or more containers. However, the pod itself is an abstraction and does not have the capability to enforce isolation or resource constraints. Instead, the Kubernetes kubelet communicates with the container runtime to implement the specifications defined in the pod, such as resource limits and networking configurations."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Summary"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "The container runtime's direct interaction with the host OS and kernel is crucial for setting up the isolated and resource-controlled environments that containers require. While Kubernetes provides the high-level abstractions and desired state configurations, it relies on the container runtime to translate these into concrete, low-level system configurations using kernel features like namespaces and cgroups."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0S4l8",
 			"typeName": "shape"
 		},
 		{
@@ -873,9 +1479,9 @@
 			"typeName": "binding"
 		},
 		{
-			"x": 690.3741426466181,
-			"y": -1026.3822926209912,
-			"z": 1.2094529904110394,
+			"x": 4233.910760344018,
+			"y": 2021.4702248529402,
+			"z": 0.1522606957752005,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -986,8 +1592,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": -903.5630803225572,
-			"y": -1006.2206242057943,
+			"x": -882.9545567819437,
+			"y": -1342.8265087024824,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -1896,15 +2502,15 @@
 			"typeName": "shape"
 		},
 		{
-			"editingShapeId": "shape:fSA5Ts2iWBxUypi7CBIZk",
+			"editingShapeId": null,
 			"croppingShapeId": null,
 			"selectedShapeIds": [
-				"shape:fSA5Ts2iWBxUypi7CBIZk"
+				"shape:cZSX0p0LujsLWCfwnXIWs"
 			],
-			"hoveredShapeId": "shape:fSA5Ts2iWBxUypi7CBIZk",
+			"hoveredShapeId": "shape:cZSX0p0LujsLWCfwnXIWs",
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
-			"focusedGroupId": "shape:EG79pFBsMyihMq3KApw43",
+			"focusedGroupId": null,
 			"meta": {},
 			"id": "instance_page_state:page:page",
 			"pageId": "page:page",
@@ -1941,6 +2547,345 @@
 			},
 			"parentId": "shape:Ve9tpYtT30Vp08BaMYzHs",
 			"index": "a35g4",
+			"typeName": "shape"
+		},
+		{
+			"x": -1686.1340200605378,
+			"y": -1361.0203646406553,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:yFZqBr6Xi0BNSJddFBhF_",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 791.7697003075791,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In Kubernetes, "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "pods"
+								},
+								{
+									"type": "text",
+									"text": " serve as the fundamental unit of deployment, encapsulating one or more containers that share certain resources. However, the pod itself is an abstraction and does not possess the capability to enforce system-level configurations like namespaces or cgroups. Instead, these configurations are implemented by external components, primarily the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "container runtime"
+								},
+								{
+									"type": "text",
+									"text": ", under the orchestration of the "
+								},
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "kubelet"
+								},
+								{
+									"type": "text",
+									"text": "."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Enforcement of Namespaces and Cgroups"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "When a pod is scheduled to run on a node, the following sequence occurs:"
+								}
+							]
+						},
+						{
+							"type": "orderedList",
+							"attrs": {
+								"start": 1
+							},
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Kubelet Interaction"
+												},
+												{
+													"type": "text",
+													"text": ": The kubelet, an agent running on each node, receives the pod specification from the Kubernetes control plane."
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "link",
+															"attrs": {
+																"href": "https://www.plural.sh/blog/kubernetes-pod/?utm_source=chatgpt.com",
+																"target": "_blank",
+																"rel": "noopener",
+																"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+															}
+														}
+													],
+													"text": "Plural"
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Container Runtime Invocation"
+												},
+												{
+													"type": "text",
+													"text": ": The kubelet communicates with the container runtime (such as containerd or CRI-O) to create and start the containers defined in the pod."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Namespace and Cgroup Configuration"
+												},
+												{
+													"type": "text",
+													"text": ": The container runtime interacts directly with the host operating system's kernel to set up:"
+												}
+											]
+										},
+										{
+											"type": "bulletList",
+											"content": [
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"marks": [
+																		{
+																			"type": "bold"
+																		}
+																	],
+																	"text": "Namespaces"
+																},
+																{
+																	"type": "text",
+																	"text": ": These provide isolation for various system resources, such as process IDs, network interfaces, and file systems. For instance, containers within the same pod share the same network namespace, allowing them to communicate over "
+																},
+																{
+																	"type": "text",
+																	"marks": [
+																		{
+																			"type": "code"
+																		}
+																	],
+																	"text": "localhost"
+																},
+																{
+																	"type": "text",
+																	"text": " ."
+																}
+															]
+														}
+													]
+												},
+												{
+													"type": "listItem",
+													"content": [
+														{
+															"type": "paragraph",
+															"attrs": {
+																"dir": "auto"
+															},
+															"content": [
+																{
+																	"type": "text",
+																	"marks": [
+																		{
+																			"type": "bold"
+																		}
+																	],
+																	"text": "Cgroups (Control Groups)"
+																},
+																{
+																	"type": "text",
+																	"text": ": These are used to limit and monitor the resource usage (CPU, memory, disk I/O, etc.) of the containers. The container runtime configures cgroups based on the resource requests and limits specified in the pod definition ."
+																},
+																{
+																	"type": "text",
+																	"marks": [
+																		{
+																			"type": "link",
+																			"attrs": {
+																				"href": "https://kubernetes.io/docs/concepts/configuration/manage-resources-containers/?utm_source=chatgpt.com",
+																				"target": "_blank",
+																				"rel": "noopener",
+																				"class": "flex h-4.5 overflow-hidden rounded-xl px-2 text-[0.5625em] font-medium text-token-text-secondary! bg-[#F4F4F4]! dark:bg-[#303030]! transition-colors duration-150 ease-in-out"
+																			}
+																		}
+																	],
+																	"text": "Kubernetes+1Wikipedia+1"
+																}
+															]
+														}
+													]
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Role of the Pod Abstraction"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "While the pod defines the desired state and configuration for the containers it encapsulates, it does not have the mechanisms to enforce these configurations. The enforcement is delegated to the container runtime, which applies the necessary system-level settings to ensure the containers operate within the defined constraints."
+								}
+							]
+						},
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Summary"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "In essence, the pod serves as a blueprint outlining how containers should be grouped and configured. The actual implementation of isolation and resource management is handled by the container runtime, under the guidance of the kubelet, through direct interactions with the host operating system's kernel. This division of responsibilities ensures that containers within a pod can share resources as intended while maintaining the necessary isolation and resource constraints."
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0T8Qf",
 			"typeName": "shape"
 		},
 		{
@@ -4465,6 +5410,146 @@
 			"typeName": "shape"
 		},
 		{
+			"x": -839.2443615240763,
+			"y": -278.3334744477818,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:_txC8qgrhX8Kf9aovvOT_",
+			"type": "text",
+			"props": {
+				"color": "orange",
+				"size": "m",
+				"w": 553.0583435413722,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.3827993767243234,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Node Components (worker node)"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Node components run on worker nodes and handle the execution and management of containers. Key node components include:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "kubelet"
+												},
+												{
+													"type": "text",
+													"text": ": An agent on each worker node that ensures containers within pods match their specifications. It interacts with the container runtime and receives pod specs via the kube-apiserver or local files."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "kube-proxy"
+												},
+												{
+													"type": "text",
+													"text": ": A network proxy on each node that manages request forwarding using TCP, UDP, or SCTP protocols, facilitating communication with Kubernetes services."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "Container Runtime"
+												},
+												{
+													"type": "text",
+													"text": ": Responsible for running containers within pods. Popular options include Docker, CRI-O, and containerd, with the runtime handling the actual container operations."
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0P6wE",
+			"typeName": "shape"
+		},
+		{
 			"x": 592.295907296322,
 			"y": 54.6022846638657,
 			"rotation": 0,
@@ -4798,6 +5883,45 @@
 			},
 			"parentId": "shape:LXD38-EDecVWY4HJobKzb",
 			"index": "a2CGQ",
+			"typeName": "shape"
+		},
+		{
+			"x": -846.8948660725146,
+			"y": -1329.717380302043,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:wXQ3NKXGWVsclwtmUOFI3",
+			"type": "text",
+			"props": {
+				"color": "black",
+				"size": "m",
+				"w": 650.21875,
+				"font": "draw",
+				"textAlign": "middle",
+				"autoSize": true,
+				"scale": 1.766542407902405,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "A pod is the smallest deployable unit in Kubernetes,"
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0Q5u6",
 			"typeName": "shape"
 		},
 		{
@@ -5711,6 +6835,211 @@
 			},
 			"parentId": "shape:Y3vhX7YA5S9An9k022OAL",
 			"index": "a1",
+			"typeName": "shape"
+		},
+		{
+			"x": 1470.3521065428974,
+			"y": -881.1390793701563,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:cZSX0p0LujsLWCfwnXIWs",
+			"type": "text",
+			"props": {
+				"color": "red",
+				"size": "m",
+				"w": 578.9447005495161,
+				"font": "draw",
+				"textAlign": "start",
+				"autoSize": false,
+				"scale": 1.2502906785650472,
+				"richText": {
+					"type": "doc",
+					"content": [
+						{
+							"type": "heading",
+							"attrs": {
+								"dir": "auto",
+								"level": 3
+							},
+							"content": [
+								{
+									"type": "text",
+									"marks": [
+										{
+											"type": "bold"
+										}
+									],
+									"text": "Master Node/ Control Plane Components"
+								}
+							]
+						},
+						{
+							"type": "paragraph",
+							"attrs": {
+								"dir": "auto"
+							},
+							"content": [
+								{
+									"type": "text",
+									"text": "Master components manage the cluster’s operations, including scheduling, resource allocation, and maintaining cluster state. Key master components include:"
+								}
+							]
+						},
+						{
+							"type": "bulletList",
+							"content": [
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "kube-apiserver"
+												},
+												{
+													"type": "text",
+													"text": ": Acts as the primary interface for all cluster communications, exposing the Kubernetes API. It validates resource creation requests and communicates securely via a designated port. Users interact with it through tools like "
+												},
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "code"
+														}
+													],
+													"text": "kubectl"
+												},
+												{
+													"type": "text",
+													"text": " or REST API calls."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "etcd"
+												},
+												{
+													"type": "text",
+													"text": ": A distributed key-value store that holds cluster configuration, metadata, and the desired and current state of resources. It communicates exclusively with the kube-apiserver, ensuring secure data access."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "kube-controller-manager"
+												},
+												{
+													"type": "text",
+													"text": ": Runs controllers that maintain the cluster’s desired state by comparing the current state (stored in etcd) with the specified state. Examples include the Node Lifecycle, DaemonSet, and Deployment controllers."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "kube-scheduler"
+												},
+												{
+													"type": "text",
+													"text": ": Assigns pods to nodes based on resource requirements, availability, affinity labels, and node taints/tolerations, optimizing workload distribution."
+												}
+											]
+										}
+									]
+								},
+								{
+									"type": "listItem",
+									"content": [
+										{
+											"type": "paragraph",
+											"attrs": {
+												"dir": "auto"
+											},
+											"content": [
+												{
+													"type": "text",
+													"marks": [
+														{
+															"type": "bold"
+														}
+													],
+													"text": "cloud-controller-manager"
+												},
+												{
+													"type": "text",
+													"text": ": Integrates with cloud providers by mapping their resources to Kubernetes objects, enabling a standardized experience across different cloud environments."
+												}
+											]
+										}
+									]
+								}
+							]
+						}
+					]
+				}
+			},
+			"parentId": "page:page",
+			"index": "b0O8Lu",
 			"typeName": "shape"
 		},
 		{
