@@ -126,9 +126,9 @@
 		{
 			"id": "pointer:pointer",
 			"typeName": "pointer",
-			"x": 5304.364458247208,
-			"y": -809.5840666855463,
-			"lastActivityTimestamp": 1747024048243,
+			"x": 386.02949080373946,
+			"y": -9594.336105673436,
+			"lastActivityTimestamp": 1747024285226,
 			"meta": {}
 		},
 		{
@@ -704,8 +704,8 @@
 					"a20Jd": {
 						"id": "a20Jd",
 						"index": "a20Jd",
-						"x": 2585.95259172235,
-						"y": 0
+						"x": 2579.2130353821058,
+						"y": 6.163958232718869e-13
 					}
 				},
 				"scale": 1
@@ -1776,9 +1776,9 @@
 			"typeName": "binding"
 		},
 		{
-			"x": -3941.683418500768,
-			"y": 2587.5026764834774,
-			"z": 0.17098645479308586,
+			"x": 11086.493571611876,
+			"y": 15408.4654404723,
+			"z": 0.057790252099994555,
 			"meta": {},
 			"id": "camera:page:page",
 			"typeName": "camera"
@@ -2829,9 +2829,7 @@
 		{
 			"editingShapeId": null,
 			"croppingShapeId": null,
-			"selectedShapeIds": [
-				"shape:ky6rrwhnmNkDdoAYXvg8J"
-			],
+			"selectedShapeIds": [],
 			"hoveredShapeId": null,
 			"erasingShapeIds": [],
 			"hintingShapeIds": [],
@@ -2840,43 +2838,6 @@
 			"id": "instance_page_state:page:page",
 			"pageId": "page:page",
 			"typeName": "instance_page_state"
-		},
-		{
-			"x": 55.35021755417665,
-			"y": -10225.978414943977,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:vL6GWl8g0TUtimPrt1GGU",
-			"type": "geo",
-			"props": {
-				"w": 1007.7422621806663,
-				"h": 1534.611660665164,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "m",
-				"font": "draw",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 0,
-				"url": "",
-				"scale": 1,
-				"richText": {
-					"type": "doc",
-					"content": [
-						{
-							"type": "paragraph"
-						}
-					]
-				}
-			},
-			"parentId": "page:page",
-			"index": "b0V4lU",
-			"typeName": "shape"
 		},
 		{
 			"x": 1653.2994070132409,
@@ -5086,6 +5047,40 @@
 			"typeName": "shape"
 		},
 		{
+			"x": 1170.977224112899,
+			"y": -11088.945976515279,
+			"rotation": 0,
+			"isLocked": false,
+			"opacity": 1,
+			"meta": {},
+			"id": "shape:WkXTFAX4XReWMpoTQT9h9",
+			"type": "line",
+			"props": {
+				"dash": "draw",
+				"size": "xl",
+				"color": "black",
+				"spline": "line",
+				"points": {
+					"a1": {
+						"id": "a1",
+						"index": "a1",
+						"x": 24.8535499708139,
+						"y": -0.6903763880782208
+					},
+					"a2A4Z": {
+						"id": "a2A4Z",
+						"index": "a2A4Z",
+						"x": 153.24923819494808,
+						"y": -1.3807527761564415
+					}
+				},
+				"scale": 1
+			},
+			"parentId": "page:page",
+			"index": "b0o2gP",
+			"typeName": "shape"
+		},
+		{
 			"x": 763.5152360921523,
 			"y": 1055.5864797406905,
 			"rotation": 0,
@@ -5404,8 +5399,8 @@
 			"typeName": "shape"
 		},
 		{
-			"x": 1189.1567391727542,
-			"y": -11431.989139454885,
+			"x": 1265.238372430013,
+			"y": -11432.679515842963,
 			"rotation": 0,
 			"isLocked": false,
 			"opacity": 1,
@@ -6787,13 +6782,15 @@
 			"followingUserId": null,
 			"opacityForNextShape": 1,
 			"stylesForNextShape": {
-				"tldraw:color": "red",
-				"tldraw:size": "xl"
+				"tldraw:color": "black",
+				"tldraw:size": "xl",
+				"tldraw:fill": "none",
+				"tldraw:geo": "rectangle"
 			},
 			"brush": null,
 			"scribbles": [],
 			"cursor": {
-				"type": "move",
+				"type": "default",
 				"rotation": 0
 			},
 			"isFocusMode": false,
@@ -7805,43 +7802,6 @@
 			},
 			"parentId": "shape:w6oxnYYOS9E1-HuqhSPKC",
 			"index": "a47Ud",
-			"typeName": "shape"
-		},
-		{
-			"x": 1121.633524010898,
-			"y": -10230.159918106552,
-			"rotation": 0,
-			"isLocked": false,
-			"opacity": 1,
-			"meta": {},
-			"id": "shape:Puy2ShHMtUK5n-59d6dEN",
-			"type": "geo",
-			"props": {
-				"w": 1007.7422621806663,
-				"h": 1534.611660665164,
-				"geo": "rectangle",
-				"color": "black",
-				"labelColor": "black",
-				"fill": "none",
-				"dash": "draw",
-				"size": "m",
-				"font": "draw",
-				"align": "middle",
-				"verticalAlign": "middle",
-				"growY": 0,
-				"url": "",
-				"scale": 1,
-				"richText": {
-					"type": "doc",
-					"content": [
-						{
-							"type": "paragraph"
-						}
-					]
-				}
-			},
-			"parentId": "page:page",
-			"index": "b0W8Z9",
 			"typeName": "shape"
 		},
 		{
